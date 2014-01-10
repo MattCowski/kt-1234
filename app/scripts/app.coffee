@@ -4,6 +4,7 @@ angular.module('krisTileApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'ui.bootstrap',
   'ngRoute'
 ])
   .config ($routeProvider, $locationProvider) ->
