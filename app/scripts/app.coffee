@@ -5,6 +5,7 @@ angular.module('krisTileApp', [
   'ngResource',
   'ngSanitize',
   'ui.bootstrap',
+  'firebase',
   'ngRoute'
 ])
   .config ($routeProvider, $locationProvider) ->
