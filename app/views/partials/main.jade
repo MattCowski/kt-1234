@@ -12,5 +12,38 @@ div(ng-include="'partials/navbar.html'")
   div(ng-repeat='thing in awesomeThings')
     h4 {{thing.name}}
     p {{thing.info}}
+  img(cl-image class="myClass", id="profilePhoto", height="95", data-crop="fit", public-id="cloudinaryPublicId")
+  img(cl-image class="cloudinary-fileupload", id="profilePhoto", height="95", data-crop="fit", public-id="cloudinaryPublicId")
+  div(id="photo-upload-btn", class="photo-upload-btn", cl-upload data="cloudinaryData")
+  p {{cloudinaryData}}
+  //- form(enctype="multipart/form-data")!=cloudinary.uploader.image_upload_tag('image')
+    //- div(ng-controller="MyCtrl")
+    //-   input(type="file", ng-file-select="onFileSelect($files)", multiple)
+    //-   div(class="drop-box",ng-file-drop="onFileSelect($files);",ng-show="ddSupported") drop files here
+    //-   div(ng-file-drop-available="dropSupported=true",ng-show="!ddSupported")HTML5 Drop File is not suported
+  p here
 .footer
   p ♥ from the Yeoman team
+
+
+
+//- h2 jQuery Uploads
+
+//- .preview
+
+//- form(enctype="multipart/form-data")!=cloudinary.uploader.image_upload_tag('image')
+
+//- script(type="text/javascript")
+//-   $.cloudinary.config({ api_key: '!{api_key}', cloud_name: '!{cloud_name}' });
+//-   console.log({ api_key: '!{api_key}', cloud_name: '!{cloud_name}' });
+//-   $('.cloudinary-fileupload').bind('fileuploadstart', function(e){
+//-     $('.preview').html('Upload started...');
+//-   });
+
+//-   // Upload finished
+//-   $('.cloudinary-fileupload').bind('cloudinarydone', function(e, data){
+//-     $('.preview').html(
+//-       $.cloudinary.image(data.result.public_id, { format: data.result.format, version: data.result.version, crop: 'scale', width: 100, height: 100 })
+//-     );
+//-     return true;
+//-   });

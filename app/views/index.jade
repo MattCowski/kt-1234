@@ -40,7 +40,7 @@ html.no-js
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src='//www.google-analytics.com/ga.js';
       s.parentNode.insertBefore(g,s)}(document,'script'));
-
+ 
     <!-- build:js(app) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
@@ -51,11 +51,26 @@ html.no-js
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-file-upload/angular-file-upload.js"></script>
     <!-- endbower -->
+    <script src="bower_components/cloudinary_js/js/jquery.ui.widget.js"></script>
+    <script src="bower_components/cloudinary_js/js/jquery.iframe-transport.js"></script>
+    <script src="bower_components/cloudinary_js/js/jquery.fileupload.js"></script>
+    <script src="bower_components/cloudinary_js/js/jquery.fileupload-image.js"></script>
+    <script src="bower_components/cloudinary_js/js/jquery.fileupload-process.js"></script>
+    <script src="bower_components/cloudinary_js/js/jquery.fileupload-validate.js"></script>
+    <script src="bower_components/cloudinary_js/js/jquery.cloudinary.js"></script>
+    <script src="bower_components/cloudinary_angular/js/angular.cloudinary.js"></script>
+    <script src="bower_components/jcrop/js/jquery.Jcrop.min.js"></script>
     <!-- endbuild -->
     
+    script.
+      console.log({ api_key: '!{api_key}', cloud_name: '!{cloud_name}' });
+      $.cloudinary.config({ api_key: '!{api_key}', cloud_name: '!{cloud_name}' });
+      var CLOUDINARY_CONFIG = { api_key: '!{api_key}', cloud_name: '!{cloud_name}' };
     <script src="https://cdn.firebase.com/v0/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.js"></script>
+    
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
@@ -63,5 +78,6 @@ html.no-js
     <script src="scripts/controllers/navbar.js"></script>
     <script src="scripts/services/fbURL.js"></script>
     <script src="scripts/services/Quotes.js"></script>
+    <script src="scripts/directives/imgCropped.js"></script>
     <!-- endbuild -->
     
