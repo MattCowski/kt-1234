@@ -9,13 +9,26 @@ div(ng-include="'partials/navbar.html'")
   p
     a.btn.btn-lg.btn-success(ng-href='#', popover-placement="bottom", popover="With angular-ui!") Check it out
 .row.marketing
-  div(ng-repeat='thing in awesomeThings')
-    h4 {{thing.name}}
-    p {{thing.info}}
-  img(cl-image class="myClass", id="profilePhoto", height="95", data-crop="fit", public-id="cloudinaryPublicId")
-  img(cl-image class="cloudinary-fileupload", id="profilePhoto", height="95", data-crop="fit", public-id="cloudinaryPublicId")
-  div(id="photo-upload-btn", class="photo-upload-btn", cl-upload data="cloudinaryData")
-  p {{cloudinaryData}}
+  p {{selected}}
+  p {{cropped}}
+  img-cropped(src='http://deepliquid.com/Jcrop/demos/demo_files/pool.jpg', selected='selected(cords)')
+  #cropped-image(ng-show='cropped')
+      img#preview(src='http://deepliquid.com/Jcrop/demos/demo_files/pool.jpg')
+
+
+  //- div(ng-repeat='thing in awesomeThings')
+  //-   h4 {{thing.name}}
+  //-   p {{thing.info}}
+
+  //- img(cl-image class="myClass", id="profilePhoto", height="95", data-crop="fit", public-id="cloudinaryPublicId")
+  //- p {{cloudinaryData}}
+  //- img(cl-image class="cloudinary-fileupload", id="profilePhoto", height="95", data-crop="fit", public-id="cloudinaryPublicId")
+  //- div(id="photo-upload-btn", class="photo-upload-btn", cl-upload data="cloudinaryData")
+
+  //- img-cropped(src='http://deepliquid.com/Jcrop/demos/demo_files/pool.jpg', selected='selected(cords)')
+  //- p {{selected}}
+  //- div(ng-show="cropped", id="cropped-image-container")
+  //-   img(id="preview", src='http://deepliquid.com/Jcrop/demos/demo_files/pool.jpg')
   //- form(enctype="multipart/form-data")!=cloudinary.uploader.image_upload_tag('image')
     //- div(ng-controller="MyCtrl")
     //-   input(type="file", ng-file-select="onFileSelect($files)", multiple)

@@ -1,5 +1,12 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
+/* for imgCropped directive */
+div#cropped-image {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
