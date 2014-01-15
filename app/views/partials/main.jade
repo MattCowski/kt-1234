@@ -32,24 +32,3 @@ div(ng-include="'partials/navbar.html'")
   p ♥ from the Yeoman team
 
 
-
-//- h2 jQuery Uploads
-
-//- .preview
-
-//- form(enctype="multipart/form-data")!=cloudinary.uploader.image_upload_tag('image')
-
-//- script(type="text/javascript")
-//-   $.cloudinary.config({ api_key: '!{api_key}', cloud_name: '!{cloud_name}' });
-//-   console.log({ api_key: '!{api_key}', cloud_name: '!{cloud_name}' });
-//-   $('.cloudinary-fileupload').bind('fileuploadstart', function(e){
-//-     $('.preview').html('Upload started...');
-//-   });
-
-//-   // Upload finished
-//-   $('.cloudinary-fileupload').bind('cloudinarydone', function(e, data){
-//-     $('.preview').html(
-//-       $.cloudinary.image(data.result.public_id, { format: data.result.format, version: data.result.version, crop: 'scale', width: 100, height: 100 })
-//-     );
-//-     return true;
-//-   });
